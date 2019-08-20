@@ -10,56 +10,56 @@ bool solveSudoku(std::vector<std::vector<int>> &matrix);
 int main()
 {
 	/*
-			Make a program that solves ANY sudoku puzzle
-			Here are some tests that you can copy and paste into the program
+	Make a program that solves ANY sudoku puzzle
+	Here are some tests that you can copy and paste into the program
 
-						*****IMPORTANT: PLEASE ENTER THE MATRIX EXAMPLES ONE-BY-ONE Copy and Paste will disorient the numbers *******
+		*****IMPORTANT: PLEASE ENTER THE MATRIX EXAMPLES ONE-BY-ONE Copy and Paste will disorient the numbers *******
 
-			You can verify the solution by looking at it :)
-			'0' will denote an empty space
+	You can verify the solution by looking at it :)
+	'0' will denote an empty space
 
 
-			3 0 6 5 0 8 4 0 0
-			5 2 0 0 0 0 0 0 0
-			0 8 7 0 0 0 0 3 1
-			0 0 3 0 1 0 0 8 0
-			9 0 0 8 6 3 0 0 5
-			0 5 0 0 9 0 6 0 0
-			1 3 0 0 0 0 2 5 0
-			0 0 0 0 0 0 0 7 4
-			0 0 5 2 0 6 3 0 0
+		3 0 6 5 0 8 4 0 0
+		5 2 0 0 0 0 0 0 0
+		0 8 7 0 0 0 0 3 1
+		0 0 3 0 1 0 0 8 0
+		9 0 0 8 6 3 0 0 5
+		0 5 0 0 9 0 6 0 0
+		1 3 0 0 0 0 2 5 0
+		0 0 0 0 0 0 0 7 4
+		0 0 5 2 0 6 3 0 0
 
-			1 0 6 0 0 9 4 0 0
-			3 0 0 8 0 7 0 0 0
-			2 0 7 0 3 0 0 0 0
-			4 9 0 0 0 0 6 0 0
-			0 3 1 4 0 8 5 2 0
-			0 0 8 0 0 0 0 4 7
-			0 0 0 0 1 0 7 0 2
-			0 0 0 9 0 2 0 0 4
-			0 0 2 6 0 0 1 0 5
+		1 0 6 0 0 9 4 0 0
+		3 0 0 8 0 7 0 0 0
+		2 0 7 0 3 0 0 0 0
+		4 9 0 0 0 0 6 0 0
+		0 3 1 4 0 8 5 2 0
+		0 0 8 0 0 0 0 4 7
+		0 0 0 0 1 0 7 0 2
+		0 0 0 9 0 2 0 0 4
+		0 0 2 6 0 0 1 0 5
 
-			0 1 0 3 0 0 9 0 6
-			4 0 0 0 6 0 0 0 0
-			0 0 7 9 0 0 0 0 2
-			0 8 0 0 2 5 0 3 0
-			0 5 0 0 0 0 0 1 0
-			0 9 0 8 3 0 0 6 0
-			9 0 0 0 0 6 4 0 0
-			0 0 0 0 8 0 0 0 7
-			8 0 5 0 0 7 0 2 0
+		0 1 0 3 0 0 9 0 6
+		4 0 0 0 6 0 0 0 0
+		0 0 7 9 0 0 0 0 2
+		0 8 0 0 2 5 0 3 0
+		0 5 0 0 0 0 0 1 0
+		0 9 0 8 3 0 0 6 0
+		9 0 0 0 0 6 4 0 0
+		0 0 0 0 8 0 0 0 7
+		8 0 5 0 0 7 0 2 0
 
-			0 5 2 4 0 0 0 0 0	
-			0 9 0 7 0 1 0 0 0	
-			0 0 0 3 0 0 4 0 2	
-			7 0 6 0 9 0 1 0 0	
-			1 0 0 0 0 0 0 0 7	
-			0 0 8 0 1 0 6 0 3	
-			4 0 7 0 0 2 0 0 0	
-			0 0 0 5 0 4 0 6 0	
-			0 0 0 0 0 6 2 3 0	
+		0 5 2 4 0 0 0 0 0	
+		0 9 0 7 0 1 0 0 0	
+		0 0 0 3 0 0 4 0 2	
+		7 0 6 0 9 0 1 0 0	
+		1 0 0 0 0 0 0 0 7	
+		0 0 8 0 1 0 6 0 3	
+		4 0 7 0 0 2 0 0 0	
+		0 0 0 5 0 4 0 6 0	
+		0 0 0 0 0 6 2 3 0	
 
-		*/
+	*/
 	std::vector<std::vector<int>> matrix(9, std::vector<int>(9));
 	std::cout << "Please enter the matrix: " << std::endl;
 
@@ -111,7 +111,7 @@ bool safe(const std::vector<std::vector<int>> &matrix, const int &x, const int &
 	   smallY = 0-(0%3) = 0;
 
 	   Now smallX and smallY are designated the top left hand spot of this sub-box
-	   At this point we can check for the key's existance with a nested forloop
+	   At this point we can check for the key's existance with a nested for-loop
 	   In this example, key = 3 and is in spot [0][0] therefore exists = true
 	*/
 	int smallX = x - (x % 3);
