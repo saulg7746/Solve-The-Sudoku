@@ -11,7 +11,7 @@ int main()
 {
 	/*
 	Make a program that solves ANY sudoku puzzle
-	Here are some tests that you can copy and paste into the program
+	Here are some tests you can use
 
 		*****IMPORTANT: PLEASE ENTER THE MATRIX EXAMPLES ONE-BY-ONE Copy and Paste will disorient the numbers *******
 
